@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Livvic:500,600,700&display=swap');
+
+html { 
+    font-family: 'Livvic', sans-serif;
+    font-size: 16px;
+    color: $white;
+}
+
+hr { width: 50px }
+
+button { font-family: inherit }
+
+ul { list-style: none }
+
+a  {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 0.875em;
+    font-weight: 700;
+    @include cellphone-breakpoint {
+        font-size: 3.5em;
+        font-weight: 600;
+    }
+}
+
+h2 {
+    font-size: 3em;
+    line-height: 1;
+    font-weight: 700;
+    @include cellphone-breakpoint {
+        font-size: 2.5em;
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+h3 {
+    font-size: 1.125em;
+    line-height: 1.55em;
+    font-weight: 700;
+}
+
+//Typography Mixins
+@mixin big-h1 {
+    font-size: 6.25em;
+    line-height: 1;
+    font-weight: 700;
+    @include rwd(1279) { font-size: 7.7vw }
+    @include tablet-breakpoint { font-size: 5.5em }
+    @include rwd(650) { font-size: 15.5vw }
+} 
+
+@mixin contact-h2 {
+    font-size: 2em;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $coral;
+}
+
+@mixin medium-font {
+    font-size: 1.125em;
+    line-height: 1.55em;
+    font-weight: 600;
+     @include cellphone-breakpoint {
+        font-weight: 500;
+    }
+}
+
+h4 { @include medium-font() }
+
+@mixin small-bold {
+    font-size: 0.9375em;
+    line-height: 1.66em;
+    font-weight: 600;
+}
+
+@mixin small-italic {
+    font-size: 0.9375em;
+    line-height: 1.66em;
+    font-weight: 500;
+    font-style: italic;
+}
+
+@mixin contact-pg-input {
+    color: hsl(0, 0%, 100%);
+    opacity: 0.6;
+    letter-spacing: normal;
+    @include small-bold();
+}
