@@ -1,1 +1,3 @@
-#Repository of Koda School
+# Repository of Koda School
+  - UI UX Skills
+  
